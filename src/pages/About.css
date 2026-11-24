@@ -1,0 +1,59 @@
+.pv-card {
+    position: relative;
+    border: 2px solid var(--pv-border);
+    border-radius: 10px;
+    background-color: var(--pv-dark);
+}
+
+.pv-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    padding: 2px;
+    border-radius: 10px;
+    background: var(--pv-rgb-gradient);
+    background-size: 200% 100%;
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+        linear-gradient(#000 0 0) content-box exclude,
+        linear-gradient(#000 0 0);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.pv-card-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.pv-card:hover::before,
+.pv-card:focus-within::before {
+    opacity: 1;
+    animation: pv-rainbow-slide 3s linear infinite;
+}
+
+@keyframes pv-rainbow-slide {
+    from {
+        background-position: 0% 0;
+    }
+
+    to {
+        background-position: 200% 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pv-card:hover::before,
+    .pv-card:focus-within::before {
+        animation: none;
+    }
+}

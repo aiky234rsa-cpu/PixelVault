@@ -1,0 +1,360 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./assets/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "PressStart";
+  src: url("./assets/fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "SpaceGrotesk", sans-serif !important;
+}
+
+body {
+  font-family: "Inter", sans-serif !important;
+}
+
+.font-press-start {
+  font-family: "PressStart", sans-serif !important;
+}
+
+:root {
+  --pv-black: #080808;
+  --pv-dark: #171717;
+  --pv-dark-light: #222222;
+  --pv-white: #FFFFFF;
+  --pv-off-white: #F5F5F5;
+
+  --pv-red: #FF3158;
+  --pv-green: #00E676;
+  --pv-blue: #3985FF;
+  --pv-purple: #A855F7;
+
+  --pv-gray: #777777;
+  --pv-light-gray: #AAAAAA;
+  --pv-border: #303030;
+
+  --pv-rgb-gradient: linear-gradient(90deg,
+      var(--pv-red),
+      var(--pv-purple),
+      var(--pv-blue),
+      var(--pv-green),
+      var(--pv-red));
+
+  --pv-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+}
+
+.pv-white {
+  color: var(--pv-white);
+}
+
+.pv-black {
+  color: var(--pv-black);
+}
+
+.pv-dark {
+  color: var(--pv-dark);
+}
+
+.pv-off-white {
+  color: var(--pv-off-white);
+}
+
+.pv-light-gray {
+  color: var(--pv-light-gray);
+}
+
+.pv-red {
+  color: var(--pv-red);
+}
+
+.pv-green {
+  color: var(--pv-green);
+}
+
+.pv-blue {
+  color: var(--pv-blue);
+}
+
+.pv-purple {
+  color: var(--pv-purple);
+}
+
+.pv-dark-bg {
+  background-color: var(--pv-dark);
+}
+
+.pv-dark-light-bg {
+  background-color: var(--pv-dark-light);
+}
+
+.pv-black-bg {
+  background-color: var(--pv-black);
+}
+
+.pv-off-white-bg {
+  background-color: var(--pv-off-white);
+}
+
+.pv-gray-bg {
+  background-color: var(--pv-gray);
+}
+
+.pv-light-gray-bg {
+  background-color: var(--pv-light-gray);
+}
+
+.pv-gradient:hover {
+  background: var(--pv-rgb-gradient);
+  background-size: 200% 100%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  animation: rgb-move 3s linear infinite;
+}
+
+.pv-gradient-fixed {
+  background: var(--pv-rgb-gradient);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-decoration: none;
+  animation: rgb-move 3s linear infinite;
+}
+
+.pv-gradient-link {
+  background: var(--pv-rgb-gradient);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-decoration: none;
+  animation: rgb-move 3s linear infinite;
+}
+
+.pv-gradient-link:hover,
+.pv-gradient-link:focus-visible {
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  animation: none;
+}
+
+@keyframes rgb-move {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+.rainbow-button {
+  position: relative;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  background: var(--pv-white);
+  color: var(--pv-black);
+}
+
+.rainbow-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+
+  border-radius: inherit;
+  background: var(--pv-rgb-gradient);
+  background-size: 200% 100%;
+  opacity: 0;
+  pointer-events: none;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+}
+
+.rainbow-button:hover {
+  background: var(--pv-rgb-gradient);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-flow 3s linear infinite;
+}
+
+.rainbow-button:hover::before {
+  opacity: 1;
+  animation: rainbow-flow 3s linear infinite;
+}
+
+@keyframes rainbow-flow {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+.rainbow-fill-button {
+  --knockout: var(--pv-black);
+
+  padding: 8px;
+  border: 2px solid var(--pv-white);
+  border-radius: 8px;
+  cursor: pointer;
+
+  background: transparent;
+  color: var(--pv-white);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.rainbow-fill-button:hover {
+  background-image: var(--pv-rgb-gradient);
+  background-size: 200% 100%;
+  background-origin: border-box;
+  background-repeat: repeat-x;
+  animation: rainbow-flow 3s linear infinite;
+
+  border-color: transparent;
+  color: var(--knockout);
+}
+
+@keyframes rainbow-flow {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+hr.pv-gradient-hr {
+  height: 2px;
+  margin: 1rem 0;
+  border: 0;
+  opacity: 1;
+  background: var(--pv-rgb-gradient);
+  background-size: 200% 100%;
+  animation: pv-rainbow-slide 3s linear infinite;
+}
+
+@keyframes pv-rainbow-slide {
+  from {
+    background-position: 0% 0;
+  }
+
+  to {
+    background-position: 200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  hr.pv-gradient-hr {
+    animation: none;
+  }
+}
+
+
+.pv-input-wrap {
+  position: relative;
+  padding: 2px;
+  border-radius: 12px;
+  background: var(--pv-border);
+  background-size: 200% 100%;
+  transition: background-color 0.2s;
+}
+
+.pv-input-wrap:focus-within {
+  background: var(--pv-rgb-gradient);
+  background-size: 200% 100%;
+  animation: pv-border-move 3s linear infinite;
+}
+
+.pv-input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 40px 10px 14px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: var(--pv-gray);
+  color: var(--pv-white);
+  font: inherit;
+}
+
+.pv-input::placeholder {
+  color: var(--pv-white);
+}
+
+
+.pv-password-toggle {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--pv-white);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.pv-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  text-overflow: ellipsis;
+
+  background-color: var(--pv-gray);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px 8px;
+}
+
+.pv-select option {
+  background: var(--pv-gray);
+  color: var(--pv-white);
+}
+
+@keyframes pv-border-move {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+.pv-banner-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+@media (max-width: 961px) {
+  .pv-banner-img {
+    height: 250px;
+  }
+}

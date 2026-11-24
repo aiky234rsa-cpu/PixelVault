@@ -1,0 +1,120 @@
+.pv-navbar {
+    position: relative;
+    width: 100%;
+    padding: 18px 0;
+    z-index: 1000;
+    background-color: var(--pv-black);
+    background-image: var(--pv-rgb-gradient);
+    background-repeat: repeat-x;
+    background-size: 200% 2px;
+    background-position: 0 100%;
+    animation: rainbow-flow 3s linear infinite;
+}
+
+@keyframes rainbow-flow {
+  to {
+    background-position: 200% 100%;
+  }
+}
+
+.pv-navbar .container {
+    row-gap: 12px;
+}
+
+.pv-toggler {
+    border: none;
+    padding: 0;
+    font-size: 1.8rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+}
+
+.pv-toggler:focus {
+    box-shadow: none;
+}
+
+.pv-logo {
+    font-size: 1.25rem;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--pv-white);
+    transition: color 0.3s ease;
+}
+
+.pv-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--pv-white);
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.pv-navbar .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    color: var(--pv-white);
+    transition: color 0.2s ease;
+}
+
+.pv-navbar .navbar-nav {
+    gap: 8px;
+}
+
+@media (max-width: 991.98px) {
+    .pv-navbar {
+        padding: 14px 0;
+    }
+
+    .pv-logo {
+        font-size: 1rem;
+    }
+
+    .pv-navbar .navbar-collapse {
+        flex-basis: 100%;
+        padding-top: 14px;
+    }
+
+    .pv-navbar .navbar-nav {
+        align-items: stretch !important;
+        gap: 2px;
+    }
+
+    .pv-navbar .nav-item,
+    .pv-navbar .nav-link {
+        width: 100%;
+    }
+
+    .pv-navbar .nav-link {
+        justify-content: space-between;
+        padding: 12px 4px;
+    }
+}
+
+@media (max-width: 380px) {
+    .pv-mobile-icons {
+        gap: 12px !important;
+        margin-right: 12px !important;
+    }
+
+    .pv-icon-btn {
+        font-size: 1.1rem;
+    }
+
+    .pv-toggler {
+        font-size: 1.6rem;
+    }
+}
