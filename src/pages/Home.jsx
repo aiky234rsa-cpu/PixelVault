@@ -30,8 +30,7 @@ function Home() {
                             <h2 className="pv-white font-press-start">YOUR IMAGINATION.</h2>
                             <h2 className="pv-white font-press-start">OUR <span className="pv-red">ASSETS.</span></h2>
                             <p className="pv-light-gray">Discover premium 3D models, realistic textures, materials and environments to bring your creative vision to life.</p>
-                            <button className="rainbow-button">EXPLORE NOW <i className="bi bi-arrow-up-right"></i></button>
-                            <a href="#collection"><button className="rainbow-fill-button ms-2">OUR COLLECTION</button></a>
+                            <a href="/catalog"><button className="rainbow-button">EXPLORE NOW <i className="bi bi-arrow-up-right"></i></button></a>
                         </SlideUp>
                     </div>
                 </section>
@@ -126,7 +125,7 @@ function Home() {
                             <h2 className="pv-white font-press-start mb-3">FIND WHAT YOU <span className="pv-blue">NEED.</span></h2>
                             <div className="d-flex justify-content-between align-items-center">
                                 <h6 className="pv-light-gray mb-0">Selected creations from the vault.</h6>
-                                <a href="#" className="pv-gradient-link">VIEW ALL <i className="bi bi-arrow-up-right"></i></a>
+                                <a href="/catalog" className="pv-gradient-link">VIEW ALL <i className="bi bi-arrow-up-right"></i></a>
                             </div>
                         </SlideUp>
                         <hr className="my-4 pv-gradient-hr" />
@@ -209,7 +208,7 @@ function Home() {
                             <h2 className="pv-white font-press-start">RENDER YOUR NEXT WORLD.</h2>
                             <h2 className="pv-green font-press-start">SAVE UP TO 35%.</h2>
                             <p className="pv-light-gray">Discover our curated collection of premium environment assets.</p>
-                            <button className="rainbow-button">SHOP COLLECTION <i className="bi bi-arrow-up-right"></i></button>
+                            <a href="/catalog"><button className="rainbow-button">SHOP COLLECTION <i className="bi bi-arrow-up-right"></i></button></a>
                         </SlideUp>
                         <hr className="mt-4 pv-gradient-hr" />
                     </div>

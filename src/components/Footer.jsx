@@ -20,7 +20,7 @@ function Footer() {
                     <div className="col-6 col-md-3">
                         <h5 className="pv-gradient-fixed">COMPANY</h5>
                         <ul style={{listStyle: "none", padding:0, margin: 0}}>
-                            <li><a href="#" className="pv-white"><span className="pv-gradient">About Us</span></a></li>
+                            <li><a href="/about" className="pv-white"><span className="pv-gradient">About Us</span></a></li>
                             <li><a href="#" className="pv-white"><span className="pv-gradient">Contact</span></a></li>
                             <li><a href="/become-a-creator" className="pv-white"><span className="pv-gradient">Become a Creator</span></a></li>
                             <li><a href="#" className="pv-white"><span className="pv-gradient">Careers</span></a></li>
@@ -38,9 +38,9 @@ function Footer() {
                     <div className="col-6 col-md-3">
                         <h5 className="pv-gradient-fixed">YOUR ACCOUNT</h5>
                         <ul style={{listStyle: "none", padding:0, margin: 0}}>
-                            <li><a href="#" className="pv-white"><span className="pv-gradient">My Account</span></a></li>
+                            <li><a href="/account" className="pv-white"><span className="pv-gradient">My Account</span></a></li>
                             <li><a href="#" className="pv-white"><span className="pv-gradient">My Downloads</span></a></li>
-                            <li><a href="#" className="pv-white"><span className="pv-gradient">Wishlist</span></a></li>
+                            <li><a href="/wishlist" className="pv-white"><span className="pv-gradient">Wishlist</span></a></li>
                             <li><a href="#" className="pv-white"><span className="pv-gradient">Orders</span></a></li>
                         </ul>
                     </div>

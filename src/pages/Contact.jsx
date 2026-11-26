@@ -122,7 +122,7 @@ function Contact() {
                             <div className="text-center">
                                 <h2 className="pv-white font-press-start">LET'S BUILD SOMETHING GREAT.</h2>
                                 <p className="pv-light-gray">Your next creative project starts here.</p>
-                                <button className="rainbow-button w-100">EXPLORE MARKETPLACE <i className="bi bi-arrow-right"></i></button>
+                                <a href="/catalog"><button className="rainbow-button w-100">EXPLORE MARKETPLACE <i className="bi bi-arrow-right"></i></button></a>
                             </div>
                         </SlideUp>
                         <hr className="pv-gradient-hr mt-4" />

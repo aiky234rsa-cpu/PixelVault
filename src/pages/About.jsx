@@ -15,16 +15,11 @@ function About() {
             <main>
                 <section className="py-4 py-lg-5 pv-black-bg">
                     <div className="container">
-                        {/* <div className="d-flex justify-content-between aling-items-center">
-                            <h6 className="mb-0 pv-white font-press-start">PIXELVAULT</h6>
-                            <h6 className="pv-light-gray">ABOUT US</h6>
-                        </div>
-                        <hr className="my-3 pv-gradient-hr" /> */}
                         <SlideUp>
                             <h5 className="pv-blue">BUILT FOR CREATORS</h5>
                             <h2 className="pv-white font-press-start my-4">YOUR VISION. <span className="pv-blue">OUR UNIVERSE.</span></h2>
                             <p className="pv-light-gray">A creative marketplace for high-quality 3D assets, textures, materials and digital resources.</p>
-                            <button className="rainbow-button">EXPLORE ASSETS</button>
+                            <a href="/catalog"><button className="rainbow-button">EXPLORE ASSETS</button></a>
                         </SlideUp>
                     </div>
                 </section>
@@ -143,7 +138,7 @@ function About() {
                         <SlideUp>
                             <h2 className="pv-white font-press-start my-4">CREATE SOMETHING EXTRAORDINARY.</h2>
                             <p className="pv-light-gray">Whether you're building a game, designing a scene or creating your next project, your next resource might be waiting here.</p>
-                            <button className="w-100 rainbow-button">EXPLORE THE MARKETPLACE <i className="bi bi-arrow-right"></i></button>
+                            <a href="/catalog"><button className="w-100 rainbow-button">EXPLORE THE MARKETPLACE <i className="bi bi-arrow-right"></i></button></a>
                         </SlideUp>
                         <hr className="my-4 pv-gradient-hr" />
                     </div>
